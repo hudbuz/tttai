@@ -21,4 +21,4 @@
 .byebug_history
 
 #Ignore bower_components
-/vendor/assets/bower/bower_components
+/vendor/assets/bower/bower_components/*
