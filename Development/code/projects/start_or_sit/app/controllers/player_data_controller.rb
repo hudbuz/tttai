@@ -6,7 +6,7 @@ class PlayerDataController < ApplicationController
     @resp = Faraday.get 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2016&format=json'
     playerData = JSON.parse(@resp.body)
     Player.download(playerData['players'])
-    binding.pry
+
   end
 
 
@@ -14,7 +14,7 @@ class PlayerDataController < ApplicationController
     @resp = Faraday.get 'http://api.fantasy.nfl.com/v1/game/stats?format=json'
     statindex = JSON.parse(@resp.body)
     Index.set_index(statindex)
-    binding.pry
+
 
   end
 

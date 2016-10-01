@@ -1,4 +1,4 @@
-class TeamController < ApplicationController
+class TeamsController < ApplicationController
 
 
 
@@ -9,6 +9,10 @@ class TeamController < ApplicationController
 
 
   def create
+
+  end
+
+  def show
 
   end
 
