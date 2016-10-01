@@ -1,6 +1,6 @@
 (function(){
   
-function PlayerController(players, $filter, position) {
+function PlayerController(players, $filter, position, PlayerService) {
 
    
    
@@ -9,7 +9,9 @@ function PlayerController(players, $filter, position) {
     
 
     player.left = ""
+    player.left.stock = ""
     player.right = ""
+    player.searchedList = []
 
 
     player.filteredList = $filter('filter')(player.data, position)
@@ -17,9 +19,17 @@ function PlayerController(players, $filter, position) {
 
     player.searchFilter = function() {
     
-      player.searchedList = $filter('filter')(player.filteredList, player.left)
+      search = $filter('filter')(player.filteredList, player.left)
+      PlayerService.getPlayer(search[0].player_id).then(function(resp){
+       
+        player.searchedList = resp.data.players[0]
+        player.stock = 'http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/'+player.searchedList.esbid+'.png'
+     
+
+      })
+    
     }
-    player.searchedList = []
+    
 
 
 }
