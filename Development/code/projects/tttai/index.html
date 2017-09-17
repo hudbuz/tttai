@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>jQuery Tic Tac Toe</title>
+    <script src="jquery.min.js"></script>
+    <script src="lib/assets/javascripts/tictactoe.js"></script>
+
+	</head>
+	<body>
+    <div id="container" class="text-center">
+      <div id="message"></div>
+
+		<table border="1" cellpadding="40" id="game">
+			<tr>
+				<td data-x="0" data-y="0"></td>
+				<td data-x="1" data-y="0"></td>
+				<td data-x="2" data-y="0"></td>
+			</tr>
+			<tr>
+				<td data-x="0" data-y="1"></td>
+				<td data-x="1" data-y="1"></td>
+				<td data-x="2" data-y="1"></td>
+			</tr>
+			<tr>
+				<td data-x="0" data-y="2"></td>
+				<td data-x="1" data-y="2"></td>
+				<td data-x="2" data-y="2"></td>
+			</tr>
+		</table>
+
+</div>
+		<div id="games"></div>
+		<button id="pvp" value="0"class="playerSettings">Human vs. Human</button>
+		<button id="pvAI" value="1"class="playerSettings">Human vs. AI</button>
+    <button id="AIvp" value="2"class="playerSettings">AI vs. Human</button>
+
+	</body>
+</html>

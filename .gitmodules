@@ -1,0 +1,3 @@
+[submodule "Development/code/projects/Halve"]
+	path = Development/code/projects/Halve
+	url = https://github.com/hudbuz/Halve.git
